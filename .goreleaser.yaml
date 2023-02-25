@@ -4,19 +4,10 @@ builds:
     id: "opossum"
     binary: "opossum"
     dir: cmd/opossum
-    env:
-      - CGO_ENABLED=0
-    goos:
-      - linux
-      - windows
-      - darwin
-    goarch:
-      - amd64
-      - arm
-      - arm64
-    goarm:
-      - 6
-      - 7
+  -
+    id: "sparklefs"
+    binary: "sparklefs"
+    package: github.com/psilva261/sparklefs/cmd/sparklefs
 archives:
   -
     format_overrides:
