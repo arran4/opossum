@@ -33,6 +33,7 @@ jobs:
             ${{ runner.os }}-go-${{ hashFiles('**/go.sum') }}
       - name: sparklefs
         run: |
+          go get github.com/psilva261/sparklefs
           go install github.com/psilva261/sparklefs/cmd/sparklefs
       - name: Test
         run: go test ./...
